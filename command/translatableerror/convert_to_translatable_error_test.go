@@ -202,7 +202,9 @@ var _ = Describe("ConvertToTranslatableError", func() {
 		Entry("actionerror.PluginInvalidError -> PluginInvalidError",
 			actionerror.PluginInvalidError{},
 			PluginInvalidError{}),
-
+		Entry("actionerror.PackageNotFoundInAppError -> PackageNotFoundInAppError",
+			actionerror.PackageNotFoundInAppError{},
+			PackageNotFoundInAppError{}),
 		Entry("actionerror.PluginInvalidError -> PluginInvalidError",
 			actionerror.PluginInvalidError{Err: genericErr},
 			PluginInvalidError{Err: genericErr}),
